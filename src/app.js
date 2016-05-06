@@ -1,1 +1,3 @@
-var dirmast = require ("./modules/directorymaster)
+var dirmast = require ("../modules/directorymaster.js")
+
+dirmast.readadirectory()

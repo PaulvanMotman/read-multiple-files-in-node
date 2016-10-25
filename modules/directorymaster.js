@@ -1,8 +1,11 @@
+// Create a function that can read entire directories and whatver files are in their
+
 function readadirectory ( foldername ) {
 
-	// Import the file system functionality
+	// Require file system functionality
 	var fs = require("fs")
 
+	// If folder is empty, quit the function.
 	if (foldername == undefined ) {
 		console.log ("Please specify a folder")
 		return
@@ -10,6 +13,8 @@ function readadirectory ( foldername ) {
 
 	// Read the directory function
 	fs.readdir(foldername, function (error, files) {
+
+		// Check for errors
 		if (error) {
 			console.log ("Oh no, ERROR: " + error)
 			throw error
@@ -20,16 +25,36 @@ function readadirectory ( foldername ) {
 
 			// Reads one array element, utf8 outputs a string
 			fs.readFile(foldername + "/" + file, 'utf8', function (error, filecontents) {
-				// Cath the error
+				// Watch for errors
 				if (error) {
 					console.log ("Oh no, ERROR: " + error)
 					throw error
 				}
-				// Console logs the contents
-				console.log(JSON.parse(filecontents))
+				// store the parsed content in a variable
+				var array = JSON.parse(filecontents)
+				// Console logs the contents of the array
+				array.forEach (function (filecontent) {
+					console.log(filecontent.hello)
+				})
 			})
 		})
 	})
 }
 
-module.exports.readadirectory= readadirectory
+// Export the readadirectory function
+module.exports.readadirectory = readadirectory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

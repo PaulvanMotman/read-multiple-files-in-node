@@ -1,6 +1,21 @@
-{
-	"hello": "sir",
-	"bye": "dude",
-	"later": "homes",
-	"wsup": "hombre"
-}
+[
+	{
+		"hello": "sir",
+		"bye": "dude",
+		"later": "homes",
+		"wsup": "hombre"
+	},
+	{
+		"hello": "sir",
+		"bye": "dude",
+		"later": "homes",
+		"wsup": "hombre"
+	},
+	{
+		"hello": "sir",
+		"bye": "dude",
+		"later": "homes",
+		"wsup": "hombre"
+	}
+
+]
